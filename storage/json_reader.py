@@ -15,6 +15,16 @@ def load_blog_posts() -> list:
         data = json.load(handle)
     return data
 
+
+def save_blog_posts(new_content: list[dict]) -> None:
+    """
+    saves updated list to blog_posts.json
+    :return: None
+    """
+    with open(DATA_FILE, "w") as handle:
+        json.dump(new_content, handle, indent=4)
+
+
 def add_blog_post(author: str, title: str, content: str) -> None:
     """
     Add a new post to blog_posts.json.
