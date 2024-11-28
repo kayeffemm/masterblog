@@ -34,8 +34,12 @@ def add_blog_post(author: str, title: str, content: str) -> None:
     :return: None
     """
     blog_posts = load_blog_posts()
+
+    max_id = max(post['id'] for post in blog_posts) if blog_posts else 0
+    new_post_id = max_id + 1
+
     new_post_dict = {
-        "id": len(blog_posts) + 1,
+        "id": new_post_id,
         "author": author,
         "title": title,
         "content": content
@@ -43,3 +47,5 @@ def add_blog_post(author: str, title: str, content: str) -> None:
     blog_posts.append(new_post_dict)
     with open(DATA_FILE, "w") as handle:
         json.dump(blog_posts, handle, indent=4)
+
+print(load_blog_posts())

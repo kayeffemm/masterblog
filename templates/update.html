@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Blog Post</title>
+</head>
+<body>
+    <h1>Update Blog Post</h1>
+    <form action="/update/{{ post.id }}" method="POST">
+        <!-- Author Input -->
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" value="{{ post.author }}" placeholder="Enter your name" required><br><br>
+
+        <!-- Post Title Input -->
+        <label for="title">Post Title:</label><br>
+        <input type="text" id="title" name="title" value="{{ post.title }}" placeholder="Enter the post title" required><br><br>
+
+        <!-- Blog Content Textarea -->
+        <label for="content">Blog Content:</label><br>
+        <textarea id="content" name="content" rows="10" cols="50" placeholder="Write your blog content here" required>{{ post.content }}</textarea><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Update Post</button>
+    </form>
+</body>
+</html>

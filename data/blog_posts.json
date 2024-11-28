@@ -2,7 +2,13 @@
     {
         "id": 1,
         "author": "Kenneth",
-        "title": "My First Post",
+        "title": "My first post",
         "content": "This is my first post, after deleting every old post."
+    },
+    {
+        "id": 2,
+        "author": "Kenneth",
+        "title": "My second post",
+        "content": "This is my second post. (:"
     }
 ]
