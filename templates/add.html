@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog Post</title>
+</head>
+<body>
+    <h1>Add a New Blog Post</h1>
+    <form action="/add" method="POST">
+        <!-- Author Input -->
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" placeholder="Enter your name" required><br><br>
+
+        <!-- Post Title Input -->
+        <label for="title">Post Title:</label><br>
+        <input type="text" id="title" name="title" placeholder="Enter the post title" required><br><br>
+
+        <!-- Blog Content Textarea -->
+        <label for="content">Blog Content:</label><br>
+        <textarea id="content" name="content" rows="10" cols="50" placeholder="Write your blog content here" required></textarea><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Add Post</button>
+    </form>
+</body>
+</html>
